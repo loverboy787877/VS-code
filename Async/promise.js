@@ -1,6 +1,6 @@
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
-    console.log("We got the user");
+    console.log("We got the user.");
     //resolve({ user: "Gordon" });
     reject(new Error("User not logged in"));
   }, 3000);

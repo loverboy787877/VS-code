@@ -53,7 +53,7 @@ console.log("End");*/
 
 //Refactor the Callback function using promise
 
-console.log("Start");
+console.log("Start!");
 
 function loginUser(email, password) {
   return new Promise((resolve, reject) => {
