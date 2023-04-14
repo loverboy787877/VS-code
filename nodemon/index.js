@@ -60,6 +60,21 @@
 // console.log(newPerson);
 // newPerson.sayName();
 
+// console.log("Start");
+
+// function getData(data, callback) {
+//   setTimeout(() => {
+//     console.log("Reading from the database");
+//     callback({ data: data });
+//   }, 2000);
+// }
+
+// getData(5, function (data) {
+//   console.log(data);
+// });
+
+// console.log("Finish");
+
 // // ES6 (variable)//////////////////////////////////////////////////////
 // const list = [1, 2, 3, 4, 5];
 // for (let i = 0; i < list.length; i++) {
@@ -145,22 +160,62 @@
 
 // console.log(filterList);
 
-//construction function//////////////////////////////////////////////////////
-class shoppingList {
-  constructor(items, nr) {
-    this.items = items;
-    this.nr = nr;
-  }
-  sayList() {
-    console.log(this.items);
-  }
-}
+//construction function////////////////////////////////////////////////////
+// class shoppingList {
+//   constructor(items, nr) {
+//     this.items = items;
+//     this.nr = nr;
+//   }
+//   sayList() {
+//     console.log(this.items);
+//   }
+// }
 
-const myList = new shoppingList(["Milk", "Banana", "Choco"], 3);
+// const myList = new shoppingList(["Milk", "Banana", "Choco"], 3);
 
-class Product extends shoppingList {
-  constructor(amount, cost) {
-    this.amount = amount;
-    this.cost = cost;
-  }
-}
+// class Product extends shoppingList {
+//   constructor(items, nr, amount, cost) {
+//     super(items, nr);
+//     this.amount = amount;
+//     this.cost = cost;
+//   }
+// }
+
+// const product = new Product(["Redbull", "Chocolate", "Milk"], 3, 100, "Dollar");
+
+// console.log(product);
+
+// product.sayList();
+
+//promises/////////////////////////////////////////////////////////////////
+// const prom = new Promise((resolve, reject) => {
+//   //Here is async code
+//   setTimeout(() => {
+//     // resolve({ user: "ed", pass: "1241q9te098cvk" });
+//     reject(new Error("something went wrong."));
+//   }, 2000);
+// });
+
+// prom
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err.msg);
+//   });
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("We got the user.");
+    //resolve({ user: "Gordon" });
+    reject(new Error("User not logged in"));
+  }, 3000);
+});
+
+promise
+  .then((user) => {
+    console.log(user);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

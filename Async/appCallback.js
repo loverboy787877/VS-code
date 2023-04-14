@@ -91,7 +91,7 @@ async function displayUser() {
     const detail = await videoDetails(videos[0]);
     console.log(detail);
   } catch (err) {
-    console.log("We could not get the videos");
+    console.log("We could not get the videos.");
   }
 }
 
@@ -110,7 +110,7 @@ displayUser();
 //   setTimeout(() => {
 //     console.log("getting stuff from fb");
 //     resolve({ user: "Name" });
-//   }, 3000);
+//   }, 3000) ;
 // });
 
 // Promise.all([yt, fb]).then((result) => console.log(result));
